@@ -10,19 +10,17 @@ class View implements \Countable
     {
         // TODO: Implement __set() method.
         $this->data[$name] = $value;
-        echo 'SSSET';
     }
     public function __get($name)
     {
-        echo 'GGGGET';
-        // TODO: Implement __get() method.
+      // TODO: Implement __get() method.
         return $this->data[$name];
 
     }
 
     public function display($temp)
     {
-        include $temp;
+        echo $this->render($temp);
     }
     public function render($temp)
     {

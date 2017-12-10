@@ -14,7 +14,7 @@ abstract class Model
         $res = $db->query(
             'SELECT * FROM ' . static::TABLE . ' WHERE id = ' . $id,
             static::class
-        );
+        )[0];
         if(empty($res))$res = false;
         return $res;
     }
