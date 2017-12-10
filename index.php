@@ -1,17 +1,17 @@
 <?php
-
-use App\Models\User;
-
 require __DIR__ . '/autoload.php';
 
+$view = new \App\View();
+$view->users = App\Models\User::findAll();
+
+$view->display( __DIR__.'/App/templates/index.php');
+
+/*include __DIR__.'/App/templates/index.php';
 $users = User::findAll();
-
-include __DIR__.'/App/templates/index.php';
-
 $us = new User();
 $us->name = "Vasya";
 $us->email = "Vasya@mail.ru";
-$us->insert();
+$us->insert();*/
 
 //$users2 = \App\Models\User::findById('1');
 //var_dump($users);

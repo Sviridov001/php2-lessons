@@ -21,7 +21,8 @@
 
 <h1>Пользователи</h1>
 
-<?php foreach ($users as $user) : ?>
+<?php var_dump($this);
+    foreach ($this->users as $user) : ?>
 
     <div class="panel panel-default">
         <div class="panel-heading">
